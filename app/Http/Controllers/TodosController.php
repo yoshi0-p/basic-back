@@ -44,7 +44,7 @@ class TodosController extends Controller
      * @param  \App\Models\Todos  $todos
      * @return \Illuminate\Http\Response
      */
-    public function show(Todos $todos)
+    public function show(Todos $todo)
     {
         //
     }
@@ -56,9 +56,9 @@ class TodosController extends Controller
      * @param  \App\Models\Todos  $todos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Todos $todos)
+    public function update(Request $request, Todos $todo)
     {
-        $item = Todos::where('id', $todos->id)->first();
+        $item = Todos::where('id', $todo->id)->first();
         $item->event = $request->event;
         $item->save();
         if ($item) {
