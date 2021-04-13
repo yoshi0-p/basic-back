@@ -81,7 +81,7 @@ class TodosController extends Controller
     public function destroy(Todos $todos)
     {
         $item = Todos::where('id', $todos->id)->delete();
-        if ($todos) {
+        if ($item) {
             return response()->json([
                 'message' => $item,
             ], 200);
