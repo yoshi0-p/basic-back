@@ -88,7 +88,7 @@ class TodosController extends Controller
         } else {
             return response()->json([
                 'message' => $item,
-            ], 404);
+            ], 405);
         }
     }
 }
