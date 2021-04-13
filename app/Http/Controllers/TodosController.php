@@ -78,7 +78,7 @@ class TodosController extends Controller
      * @param  \App\Models\Todos  $todos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Todos $todos)
+    public function destroy(Todos $todo)
     {
         $item = Todos::where('id', $todos->id)->delete();
         if ($item) {
@@ -87,7 +87,7 @@ class TodosController extends Controller
             ], 200);
         } else {
             return response()->json([
-                'message' => $todos->id,
+                'message' => $todo->id,
             ], 404);
         }
     }
