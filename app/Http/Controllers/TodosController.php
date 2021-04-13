@@ -87,7 +87,7 @@ class TodosController extends Controller
             ], 200);
         } else {
             return response()->json([
-                'message' => $item,
+                'message' => $todos->id,
             ], 404);
         }
     }
