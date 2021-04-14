@@ -75,7 +75,7 @@ class TodosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Todos  $todos
+     * @param  \App\Models\Todos  $todo
      * @return \Illuminate\Http\Response
      */
     public function destroy(Todos $todo)
